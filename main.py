@@ -1,8 +1,7 @@
 from scraper import fetch_jobs
 
 def main():
-    jobs = fetch_jobs
-
+    jobs = fetch_jobs()
     for i, job in enumerate(jobs, 1):
         print(f"{i}. {job['title']} - {job['company']}")
 

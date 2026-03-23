@@ -1,0 +1,9 @@
+# Job Scraper
+
+What it does?
+It's a automated tool that collects job postings from specific url.
+It consolidates these posts in a single database for easier search/filter.
+
+Features:
+- Search by keyword
+- Timestamps

@@ -4,8 +4,13 @@ from bs4 import BeautifulSoup
 def fetch_jobs():
     url = "https://realpython.github.io/fake-jobs/"
 
-    #Takes whole html code from provided url
-    response = requests.get(url)
+    try:
+        #Takes whole html code from provided url
+        response = requests.get(url)
+        response.raise_for_status #Check for HTTP errors
+    except requests.RequestException:
+        print("Error fetching jobs")
+        return []
     soup = BeautifulSoup(response.text, "html.parser")
 
     jobs = []

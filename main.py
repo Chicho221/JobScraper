@@ -3,7 +3,6 @@ from datetime import datetime
 import json
 
 def main():
-
     #Takes timestamp and formats it    
     def timestamp():
         time = datetime.now()
